@@ -45,11 +45,13 @@ trait RequestBuilding {
     }
   }
 
-  object Get    extends RequestBuilder { def method = GET }
-  object Post   extends RequestBuilder { def method = POST }
-  object Put    extends RequestBuilder { def method = PUT }
-  object Patch  extends RequestBuilder { def method = PATCH }
-  object Delete extends RequestBuilder { def method = DELETE }
+  object Get     extends RequestBuilder { def method = GET }
+  object Post    extends RequestBuilder { def method = POST }
+  object Put     extends RequestBuilder { def method = PUT }
+  object Patch   extends RequestBuilder { def method = PATCH }
+  object Delete  extends RequestBuilder { def method = DELETE }
+  object Options extends RequestBuilder { def method = OPTIONS }
+  object Head    extends RequestBuilder { def method = HEAD }
 
   def encode(encoder: Encoder): RequestTransformer = encoder.encode(_)
 
